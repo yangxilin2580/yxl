@@ -1,7 +1,8 @@
 ###yxl库中文文档###
+
 **1. getobj(selector)**
 
-**使用说明：**通过选择器获取节点对象。
+- **使用说明：**通过选择器获取节点对象。
   
 >  调用方法：getobj("#类名"/".类名"/"标签名")
 
@@ -23,9 +24,9 @@
 
 **2. bindEvent(nodeList,eventType,fn)**
 
-**使用说明：**为每个nodeList绑定某个事件，可传三个参数或两个参数（默认为onclick点击事件）
+- **使用说明：**为每个nodeList绑定某个事件，可传三个参数或两个参数（默认为onclick点击事件）
 
-注意：必须按顺序传参数。
+- 注意：必须按顺序传参数。
 
 > 调用方法：bindEvent(nodeList,"事件类型",function(){执行事件})
 
@@ -44,7 +45,7 @@
 
 **3. insertAfter(newElement,targetElement)**
 
-**使用说明：**向一个节点后插入一个节点。
+- **使用说明：**向一个节点后插入一个节点。
 
 > 调用方法：insertAfter(插入元素,插入位置) 
 
@@ -61,7 +62,7 @@
 
 **4. color()**
 
-**使用说明：**随机出现的16进制颜色值
+- **使用说明：**随机出现的16进制颜色值
 
 > 调用方法：color()
  
@@ -81,7 +82,7 @@
    
 **5.nextBrotherNode(brother)**
 
-**使用说明：**重新实现nextSibling 该函数期望传入一个node节点,返回离它最近的下一个兄弟元素节点
+- **使用说明：**重新实现nextSibling 该函数期望传入一个node节点,返回离它最近的下一个兄弟元素节点
 > 调用方法：nextBrotherNode(brother)
 
        function nextBrotherNode(brother){
@@ -95,7 +96,7 @@
  
 **6. allchild(all)**
 
-**使用说明：**寻找子元素节点 该函数期望传入一个node节点，返回该节点里面的所有子元素节点
+- **使用说明：**寻找子元素节点 该函数期望传入一个node节点，返回该节点里面的所有子元素节点
 >  调用方法：allchild(all)
 
        function allchild(all){
