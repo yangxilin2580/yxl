@@ -8,11 +8,10 @@
    	    	}
    	    		return result;
    	   	}
-   	   	var liList=document.getElementById('top').getElementsByTagName('li')
-   	   		for (var i=0;i<liList.length;i++){
-   	   			liList[i].style.backgroundColor=color()
-   	   		}
-
+   	   	// var liList=document.getElementById('top').getElementsByTagName('li')
+   	   	// 	for (var i=0;i<liList.length;i++){
+   	   	// 		liList[i].style.backgroundColor=color()
+   	   	// 	}
 // 2.通过选择器获取元素节点的函数：
 		function getobj(selector){
 			var str=selector.slice(1)
@@ -39,7 +38,9 @@
 				nodeList[i][eventType]=fn
 			}
 		}
-
+		// bindEvent(nodeList,"onclick",function(){
+		// 	alert(1)
+		// })
 //4.封装的insertAfter
 		function insertAfter(newElement,targetElement){  
     		var parent=targetElement.parentNode;  
@@ -49,4 +50,23 @@
    			else{  
         		parent.insertBefore(newElement,targetElement.nextSibling);  
     		}  
-		} 					
+		} 
+		// insertAfter(newElement,targetElement) 
+
+//5.重新实现nextSibling 该函数期望传入一个node节点,返回离它最近的下一个兄弟元素节点
+    function nextBrotherNode(brother){
+    	while(brother.nextSibling.nodeType!=1){
+    		brother = brother.nextSibling
+    		if(brother.nextSibling.nodeType==1){
+    			return brother.nextSibling
+    		}
+    	}
+    }
+//6.寻找子元素节点 该函数期望传入一个node节点，返回该节点里面的所有子元素节点
+	function allchild(all){
+    	for(var a=0;a<all.childNodes.length;a++){
+    		if(all.childNodes[a].nodeType==1){
+    			console.log(all.childNodes[a])
+    		}
+    	}
+    }				
